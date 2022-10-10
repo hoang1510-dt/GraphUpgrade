@@ -32,7 +32,8 @@ initVis = () => {
       },
       physics: true,
       nodes: {
-        shape: "box",
+        shape: "image",
+        image: "https://smartf.mobifone.vn/mobifone.web/media/topology/routerType2.png"
         labelHighlightBold: true,
         font: {
           face: 'arial'
@@ -76,6 +77,21 @@ initVis = () => {
 }
 
 // utilities
+function makeid(length) {
+  var result           = '';
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-/';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+    result += characters.charAt(Math.floor(Math.random() * 
+charactersLength));
+ }
+ return result;
+}
+function randomRange(min, max) {
+
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
 
 function getScaleFreeNetwork(nodeCount) {
     const nodes = [];
@@ -86,7 +102,7 @@ function getScaleFreeNetwork(nodeCount) {
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
         id: i,
-        label: 'Node '+String(i),
+        label: "router-"makeid(randomRange(7,15)),
       });
   
       connectionCount[i] = 0;
@@ -116,7 +132,7 @@ function getScaleFreeNetwork(nodeCount) {
         edges.push({
           from: from,
           to: to,
-          label: 'label'
+          label: Math.random(10) + '/'+ Math.random(10) + '/'+ Math.random(10)
         });
         connectionCount[from]++;
         connectionCount[to]++;
