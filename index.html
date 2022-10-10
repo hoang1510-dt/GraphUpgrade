@@ -4,7 +4,7 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>VisNetwork Edit - A minimal graph editor for your browser</title>
+    <title>SmartF</title>
     <script
       src="https://code.jquery.com/jquery-1.12.4.min.js"
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -96,16 +96,10 @@
       });
     </script>
   </head>
-  <body onbeforeunload="aboutToLeavePage(event) ">
-    <div class="row">
-      <div id="vis-config" hidden></div>
-      <input id="file-input" type="file" name="name" style="display: none" />
-      <div id="mynetwork"></div>
-    </div>
-
+  <body onbeforeunload="aboutToLeavePage(event)">
     <div class="row">
       <div class="col-sm-1">
-        <img src="tinkertoy-graph.png" id="logo" />
+        <img src="https://smartf.mobifone.vn/mobifone.web/media/logos/smartf.png" id="logo" />
       </div>
       <div class="col-sm-10">
         <div id="toolbarMain"></div>
@@ -116,5 +110,12 @@
        
       </div>
     </div>
+    <div class="row">
+      <div id="vis-config" hidden></div>
+      <input id="file-input" type="file" name="name" style="display: none" />
+      <div id="mynetwork"></div>
+    </div>
+
+
   </body>
 </html>
