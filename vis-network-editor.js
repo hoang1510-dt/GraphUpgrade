@@ -33,7 +33,7 @@ initVis = () => {
       physics: true,
       nodes: {
         shape: "image",
-        image: "https://smartf.mobifone.vn/mobifone.web/media/topology/routerType2.png"
+        image: "https://smartf.mobifone.vn/mobifone.web/media/topology/routerType2.png",
         labelHighlightBold: true,
         font: {
           face: 'arial'
