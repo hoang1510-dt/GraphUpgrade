@@ -102,7 +102,7 @@ function getScaleFreeNetwork(nodeCount) {
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
         id: i,
-        label: "router-"+makeid(randomRange(7,15)),
+        label: makeid(randomRange(3,5))+"-"+makeid(randomRange(7,12))+"-"makeid(randomRange(2,5)),
       });
   
       connectionCount[i] = 0;
@@ -132,7 +132,7 @@ function getScaleFreeNetwork(nodeCount) {
         edges.push({
           from: from,
           to: to,
-          label: Math.random(10) + '/'+ Math.random(10) + '/'+ Math.random(10)
+          label: randomRange(0,10) + '/'+ randomRange(0,10) + '/'+ randomRange(0,10)
         });
         connectionCount[from]++;
         connectionCount[to]++;
