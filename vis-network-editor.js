@@ -102,7 +102,7 @@ function getScaleFreeNetwork(nodeCount) {
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
         id: i,
-        label: makeid(randomRange(3,5))+"-"+makeid(randomRange(7,12))+"-"makeid(randomRange(2,5)),
+        label: makeid(randomRange(3,5))+"-"+makeid(randomRange(7,12))+"-"+makeid(randomRange(2,5)),
       });
   
       connectionCount[i] = 0;
